@@ -11,6 +11,7 @@ def amend_gradebook(operation, grade_input, assignment_input):
         gradebook.append(assignment_input)
         gradebook.append(int(grade_input))
     elif(operation == "remove"):
+        assignment = ""
         if(assignment in gradebook and int(grade_input) in gradebook):
             gradebook.remove(assignment_input)
             gradebook.remove(int(grade_input))
@@ -18,6 +19,7 @@ def amend_gradebook(operation, grade_input, assignment_input):
             print("Assignment or grade not found in gradebook")
     else:
         print_grades()
+
 # main function
 def main():
     print("Welcome to John's CS Gradebook. ")
@@ -36,5 +38,6 @@ def main():
         elif(user_input == "exit"):
             print("Exiting Gradebook")
             break
+
 #running the main function
 main()  
