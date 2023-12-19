@@ -36,8 +36,5 @@ def main():
         elif(user_input == "exit"):
             print("Exiting Gradebook")
             break
-
-
-
 #running the main function
-    main()  
+main()  
